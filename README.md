@@ -1,6 +1,6 @@
 # WeatherApp
 
-	An application in Python and Django that allows you to get information about weather conditions in various cities around the world.
+	Application in Python and Django, allowing to get information about the weather conditions in different cities around the world.
 
 	1) API for weather: https://openweathermap.org/
 	2) Django official site: https://www.djangoproject.com/
