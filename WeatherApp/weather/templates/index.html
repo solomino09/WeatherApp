@@ -23,7 +23,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-5 offset-1">
+            <div class="col-md-5">
                 <h1>Погодная инфа в вашем городе</h1>
 
                 <form action="" method="post">
@@ -34,9 +34,8 @@
                 </form>
 
             </div>
-
             
-            <div class="col-md-4 offset-1">
+            <div class="col-md-7">
                 <h1>Инфо: <a class="btn btn-outline-primary" style="float: right;" href="/">Обновить</a></h1>
                 {% for info in all_info %}
                 <div class="alert alert-success">
@@ -44,9 +43,15 @@
                         <div class="col-8">
                             <b>Город: </b> {{info.city}} <br>
                             <b>Температура: </b> {{info.temperature}}<sup>o</sup><br>
+                            <b>MIN: </b> {{info.min_temp}}<sup>o</sup>
+                            <b>MAX: </b> {{info.max_temp}}<sup>o</sup><br>
+                            <b>Облачность: </b> {{info.clouds}}%<br>
+                            <b>Ветер: </b> {{info.wind_speed}} <sup>м/с</sup> - {{info.wind_deg}}<sup>o</sup><br>
+                            <b>Влажность: </b> {{info.humidity}} % <br>
                         </div>
-                        <div class="col-2 offset-1">
-                            <img src="http://openweathermap.org/img/w/{{info.icon}}.png" alt="Фото погоды">
+                        <div class="col-4">
+                            <b>{{info.description}}</b><br>
+                            <img style="zoom: 2;" src="http://openweathermap.org/img/w/{{info.icon}}.png" alt="Фото погоды">
                         </div>
                     </div>
                 </div>
